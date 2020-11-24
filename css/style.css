@@ -18,14 +18,29 @@ h1 {
 
 /* SLIDER */
 #slider {
-  /* dimensioni */
-  height: 400px;
-  width: 600px;
   /* posizionamento */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* flex */
+  display: flex;
+  align-items: center;
   /* estetica */
   background-color: darkred;
+}
+#slider i {
+  margin: 20px;
+  font-size: 72px;
+  transition: 0.5s;
+}
+#slider i:hover {
+  transform: scale(1.1);
+  color: #0892D0;
+  cursor: pointer;
+}
+.images_container {
+  width: 600px;
+  height: 400px;
+  background-color: orange;
 }
