@@ -34,8 +34,15 @@ function nextItem() {
 
   // 2 - Togliere la classe active all'elemento selezionato
   activeImage.removeClass("active");
-  // 3 - Assegnare la classe active all'elemento subito dopo
-  activeImage.next().addClass("active");
+
+  if (activeImage.hasClass("last") == true) {
+    // Se l'immagine su cui sono ha classe last è l'ultima quindi riassegno la classe al primo div
+    $(".images_container div.first").addClass("active");
+  } else {
+    // 3 - Assegnare la classe active all'elemento subito dopo
+    activeImage.next().addClass("active");
+  }
+
 }
 
 function previousItem() {
