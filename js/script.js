@@ -22,12 +22,12 @@ $(document).ready(
         nextItem();
       }
     );
-    
+
   }
 );
 
 // FUNZIONI
-function previousItem() {
+function nextItem() {
   // 1 - Devo selezionare gli elementi interessati con le variabili
   var activeImage = $("div.images_container div.active");
   var activeCircle = $("#nav ul li.active_circle");
@@ -38,6 +38,6 @@ function previousItem() {
   activeImage.next().addClass("active");
 }
 
-function nextItem() {
+function previousItem() {
 
 }
