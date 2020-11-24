@@ -8,21 +8,29 @@
 /* REGOLE COMUNI */
 body {
   padding: 50px;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* estetica */
   font-size: 24px;
   color: white;
   background-color: black;
 }
 h1 {
+  margin-bottom: 25px;
+  align-self: flex-start;
   font-size: 48px;
+}
+.single_item {
+  display: none;
+}
+.active {
+  display: inline-block;
 }
 
 /* SLIDER */
 #slider {
-  /* posizionamento */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   /* flex */
   display: flex;
   align-items: center;
@@ -30,7 +38,7 @@ h1 {
   background-color: darkred;
 }
 #slider i {
-  margin: 20px;
+  margin: 40px;
   font-size: 72px;
   transition: 0.5s;
 }
@@ -40,7 +48,35 @@ h1 {
   cursor: pointer;
 }
 .images_container {
-  width: 600px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   background-color: orange;
+}
+#maneskin {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/maneskin.jfif");
+  background-position: center;
+  background-size: contain;
+}
+#the_weekend {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/the_weekend.jpg");
+  background-position: center;
+  background-size: contain;
+}
+#xxx_tentacion {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/xxx.jfif");
+  background-position: center;
+  background-size: contain;
+}
+#linkin_park {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/linkin_park.jfif");
+  background-position: center;
+  background-size: contain;
 }
