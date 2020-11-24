@@ -21,9 +21,6 @@ h1 {
   align-self: flex-start;
   font-size: 48px;
 }
-.not_active {
-  display: none;
-}
 .active {
   display: inline-block;
 }
@@ -53,6 +50,12 @@ h1 {
   width: 500px;
   height: 500px;
   background-color: orange;
+}
+.images_container div {
+  display: none;
+}
+.images_container div.active {
+  display: inline-block;
 }
 #maneskin {
   width: 100%;
