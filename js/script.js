@@ -28,19 +28,21 @@ $(document).ready(
 
 // FUNZIONI
 function nextItem() {
-  // 1 - Devo selezionare gli elementi interessati con le variabili
+  // 1 - Seleziono gli elementi interessati con le variabili
   var activeImage = $("div.images_container div.active");
-  var activeCircle = $("#nav ul li.active_circle");
+  var activeCircle = $("ul li.active_circle");
 
-  // 2 - Togliere la classe active all'elemento selezionato
+  // 2 - Tolgo la classe active all'elemento selezionato
   activeImage.removeClass("active");
+  activeCircle.removeClass("active_circle");
 
+  // 3 - Assegno la classe active all'elemento subito dopo, a meno che non sia arrivato all'ultima immagine
   if (activeImage.hasClass("last") == true) {
-    // Se l'immagine su cui sono ha classe last è l'ultima quindi riassegno la classe al primo div
     $(".images_container div.first").addClass("active");
+    $("ul li.first").addClass("active_circle");
   } else {
-    // 3 - Assegnare la classe active all'elemento subito dopo
     activeImage.next().addClass("active");
+    activeCircle.next().addClass("active_circle");
   }
 
 }
