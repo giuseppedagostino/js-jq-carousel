@@ -48,5 +48,17 @@ function nextItem() {
 }
 
 function previousItem() {
+  var activeImage = $("div.images_container div.active");
+  var activeCircle = $("ul li.active_circle");
 
+  activeImage.removeClass("active");
+  activeCircle.removeClass("active_circle");
+
+  if (activeImage.hasClass("first") == true) {
+    $(".images_container div.last").addClass("active");
+    $("ul li.last").addClass("active_circle");
+  } else {
+    activeImage.prev().addClass("active");
+    activeCircle.prev().addClass("active_circle");
+  }
 }
