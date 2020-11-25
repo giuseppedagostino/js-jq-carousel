@@ -1,7 +1,3 @@
-// Bonus:
-// Clicchiamo sui pallini e mostriamo l’immagine corrispondente.
-// Generiamo i pallini con JS.
-
 $(document).ready(
   function() {
 
@@ -28,7 +24,20 @@ $(document).ready(
         } else if (event.keyCode == 39) {
           nextItem();
         }
-        
+
+      }
+    );
+
+    // SEZIONE BONUS
+    $("li").click(
+      function() {
+        $("li.active_circle").removeClass("active_circle");
+        $(this).addClass("active_circle");
+
+        var circleIndex = $(this).index();
+
+        $(".images_container > div.active").removeClass("active");
+        $(".images_container > div").eq(circleIndex).addClass("active");
       }
     );
 
